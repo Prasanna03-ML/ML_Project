@@ -1,0 +1,30 @@
+Project Summary:
+The algorithms used in this project are Support Vector Classifier Model, Random Forest Classifier Model, Artifical Neural Network (MLP Classifier Model).
+Training methods: Train-test split for 70:20 for initial modelling.
+
+Feature Selection/Engineering:
+*The most important feature selection for analysis which i used is PCA factorization which can be reduce the dimensionality of the dataset and the data contains more than 25 features and it will keeps only important feature in the dataset, it will migrate the overfitting of the data and to increase the model performance.
+*For yearsince last promotion feature have some skewed in data, hence used square root transformation.
+*There is no highly correlated feature occurs in the heatmap.
+*The other technique and tool used as 
+	1.) EDA (Exploratory Data Analysis) using numpy,pandas,matplotlib and seaborn (python).
+	2.) Data Preprocessing such as missing value, finding the outlier using boxplot and reducing the outlier using Inter Quantile Range.
+	3.) Mapping the cateorical features into numerical features using normal encoding method.
+	4.)Feature scaling and Feature transformation.
+	5.) Model Evaluation metrics such as accuracy_score,Precision Score and classifiaction report.
+
+Results, Analysis and insights:
+1.) Some departments relationship is not fit due to the underperformed irrespective of individual employee profiles signed of poor management or culture.
+2.) Support Vector Machine: Training Accuracy: 96.50% Testing Accuracy: 93.52%
+    Random Forest: Training Accuracy: 100% Testing Accuracy: 95.80%
+    Artificial Neural Network (Multilayer Perceptron): Training Accuracy: 99.18% Testing Accuracy: 96.00%
+    Among these models, the Artificial Neural Network (Multilayer Perceptron) achieved highest accuracy in both training and testing phases, with a training accuracy of 99.18% and a testing accuracy of 96.00% with 96.08% precision score.
+    This model strikes a good balance between high training accuracy and a strong testing accuracy, making it a strong candidate for being the "sweet spot" model.
+3.) To understand from business problem we need to check the department wise performance is to identify the top performing and underperforming departments.
+    Top three factors afffecting performance are,
+        1.Emp Environment Satisfaction
+        2.Emp Last Salary Hike Percent
+        3.Emp Work Life Balance
+4.) Based on the given data feature we need to predict the performance rating of the employee.
+5.) The additional business insights - High performers often had longer service lengths, suggesting retention strategies can improve performance.
+    Employees with no rating last year had ambiguous performance, suggesting better performance tracking is needed.
